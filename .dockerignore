@@ -1,0 +1,7 @@
+*.log
+.git
+.DS_Store
+.gitignore
+.tmp
+node_modules
+*.swp
