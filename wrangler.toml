@@ -1,0 +1,7 @@
+name = "lessn"
+main = "src/index.ts"
+compatibility_date = "2022-08-21"
+
+kv_namespaces = [
+    { binding = "LINKS", preview_id = "177cea9a7eb648e3ba8ce360272cef23", id = "177cea9a7eb648e3ba8ce360272cef23" }
+]

@@ -1,17 +1,14 @@
 {
-  "name": "lessn-archive",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "lessn",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.1",
+    "typescript": "^4.7.4",
+    "wrangler": "2.0.26"
   },
-  "author": "VirtualWolf",
-  "license": "MIT",
-  "dependencies": {
-    "bases": "^0.2.1",
-    "express": "^4.15.3",
-    "pg": "^6.4.0"
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish"
   }
 }
