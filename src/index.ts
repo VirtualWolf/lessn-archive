@@ -11,7 +11,11 @@ export default {
 			return new Response("Hello, world!");
 		}
 
-		const item = await env.LINKS.get(path.substring(1));
+		// The original Lessn uses Base36 in the short URLs but stores them in the database
+		// as regular Base10: https://github.com/shauninman/Lessn/blob/master/index.php#L11
+		const itemId = parseInt(path.substring(1), 36).toString(10);
+
+		const item = await env.LINKS.get(itemId);
 
 		if (item === null) {
 			return new Response('Not found', 404);
