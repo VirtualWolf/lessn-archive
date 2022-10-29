@@ -18,7 +18,11 @@ export default {
 		const item = await env.LINKS.get(itemId);
 
 		if (item === null) {
-			return new Response('Not found', 404);
+			console.error('Failed to find item with path ' + path);
+
+			return new Response('Not found', {
+				status: 404,
+			});
 		}
 
 		return Response.redirect(item, 302);
